@@ -2,6 +2,8 @@
 
 淘宝商品与竞品监控 Agent · 方案设计与本地演示
 
+[![Checks](https://github.com/yezhi-0430/xunpin/actions/workflows/check.yml/badge.svg)](https://github.com/yezhi-0430/xunpin/actions/workflows/check.yml)
+
 面向电商运营的本地监控工作台。支持商品快照、变化证据、运营任务、来源控制与独立调度；提供真实接口适配器和明确隔离的流程回放。**已从天池官方历史语料抽样接入200条真实标题/描述；真实文本的两次DeepSeek验证一条通过、一条回退。在线淘宝采集尚未接通。**
 
 ## 本地运行
@@ -36,7 +38,7 @@ uv run pytest -q
 uv run python -m evaluations.run --check --json artifacts/evaluation.json --markdown artifacts/evaluation.md
 ```
 
-后端用标准库 SQLite，前端无 CDN 或构建依赖。`uv.lock` 固定依赖；测试覆盖签名、未授权不请求、调度、限频、退避、暂停、乱序、持久去重、证据及 API 流程。CI 配置已提供，远程尚未运行。
+后端用标准库 SQLite，前端无 CDN 或构建依赖。`uv.lock` 固定依赖；测试覆盖签名、未授权不请求、调度、限频、退避、暂停、乱序、持久去重、证据及 API 流程。GitHub Actions已通过Ubuntu / Python 3.11、3.13检查，见顶部Checks；Windows本地96项测试通过。
 
 从侧栏“方案与验收”打开 [一页说明](http://127.0.0.1:8000/static/briefing.html)：业务目标、Agent分工、数据来源与四项要求的验收证据。该页数字为2026-10-21验证记录，可打印，不会触发采集或模型请求。当前已有回放分析和反馈，查看即可，重置会清除这些回放记录。
 

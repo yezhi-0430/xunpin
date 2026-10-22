@@ -112,3 +112,6 @@ README、说明页和演示提纲已同步，明确真实历史文本已接入�
 ## GitHub公开版准备（2026-10-22）
 
 用户授权公开上传“巡品”，仓库地址采用拼音xunpin。新增生成样例包examples/demo-data.json，空数据库首次启动即可查看220/18/7/80；本地已有导入优先，正式监控表仍为空。真实天池文本、源ZIP、样本数据库、真实文本模型输出及密钥不随代码分发。新增2个回归先失败再通过，完整96项测试通过；Windows批处理测试在Linux按平台跳过，其余启动器测试继续运行。
+
+
+公开仓库已创建为[巡品 xunpin](https://github.com/yezhi-0430/xunpin)，首个提交23a6c46远端84文件与本地一致。敏感文件、数据库和私有产物未进入提交。首次[GitHub Actions](https://github.com/yezhi-0430/xunpin/actions/runs/39700158537)已成功，Ubuntu / Python3.11和3.13均完成测试、规则与JS检查。
