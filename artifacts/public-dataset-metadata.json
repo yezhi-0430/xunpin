@@ -1,0 +1,212 @@
+{
+  "checked_at": "2026-10-21T22:09:09.240930+08:00",
+  "scope": "Public Kaggle metadata only; no dataset files, credentials, or product API requests. Listed licenses are publisher metadata, not independently verified rights. lastUpdated is a dataset publication timestamp, not a product observation time.",
+  "queries": [
+    {
+      "query": "taobao",
+      "http_status": 200,
+      "results": [
+        {
+          "ref": "pavansanagapati/ad-displayclick-data-on-taobaocom",
+          "title": "Ad Display/Click Data on Taobao.com",
+          "subtitle": "",
+          "lastUpdated": "2020-04-29T15:31:23.867Z",
+          "licenseName": "Unknown",
+          "totalBytes": 262138414
+        },
+        {
+          "ref": "laurentmih/aisegmentcom-matting-human-datasets",
+          "title": "AISegment.com - Matting Human Datasets",
+          "subtitle": "Binary segmentation of humans and their background.",
+          "lastUpdated": "2019-06-06T18:35:59.15Z",
+          "licenseName": "Other (specified in description)",
+          "totalBytes": 30881078120
+        },
+        {
+          "ref": "akacoder404/taobao-maternal-and-infant-shopping-data-set",
+          "title": "Taobao Maternal and Infant Shopping Data Set",
+          "subtitle": "This data set is provided by Taobao & Tmall.",
+          "lastUpdated": "2023-08-17T22:26:09.983Z",
+          "licenseName": "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)",
+          "totalBytes": 1963363
+        },
+        {
+          "ref": "marwa80/userbehavior",
+          "title": "User Behavior Data from Taobao for Recommendation",
+          "subtitle": "start work with big data",
+          "lastUpdated": "2023-08-11T01:27:39.887Z",
+          "licenseName": "Unknown",
+          "totalBytes": 949807480
+        },
+        {
+          "ref": "chenxi1228/taobao-tgn-style",
+          "title": "Taobao (TGN Style)",
+          "subtitle": "Taobao dataset which is pre-processed in TGN Style.",
+          "lastUpdated": "2023-08-23T06:39:31.797Z",
+          "licenseName": "CC BY-NC-SA 4.0",
+          "totalBytes": 1643403238
+        },
+        {
+          "ref": "gogokerry/taobao-user-behavior",
+          "title": "Taobao User Behavior",
+          "subtitle": "",
+          "lastUpdated": "2025-06-01T15:10:13.037Z",
+          "licenseName": "MIT",
+          "totalBytes": 949807480
+        },
+        {
+          "ref": "fanfanguo/e-commerce-sales-data",
+          "title": "E-commerce-sales-data",
+          "subtitle": " Taobao Tmall Jingdong, covering 200 A-share listed companies",
+          "lastUpdated": "2023-12-18T05:29:38.303Z",
+          "licenseName": "Apache 2.0",
+          "totalBytes": 70961
+        },
+        {
+          "ref": "sonnyinkai369/taobao",
+          "title": "taobao",
+          "subtitle": "",
+          "lastUpdated": "2025-01-17T09:05:18.407Z",
+          "licenseName": "Apache 2.0",
+          "totalBytes": 250
+        },
+        {
+          "ref": "lyhue1991/taobao10w",
+          "title": "taobao10w",
+          "subtitle": "",
+          "lastUpdated": "2022-06-06T02:25:02.707Z",
+          "licenseName": "Unknown",
+          "totalBytes": 545436183
+        },
+        {
+          "ref": "norexxxxxx/taobaomobile",
+          "title": "taobao-mobile",
+          "subtitle": "",
+          "lastUpdated": "2022-05-18T15:56:52.327Z",
+          "licenseName": "Unknown",
+          "totalBytes": 11581600
+        },
+        {
+          "ref": "jojoyin/taobo-chat-corpus",
+          "title": "taobao-chat corpus",
+          "subtitle": "",
+          "lastUpdated": "2024-05-04T05:52:19.2Z",
+          "licenseName": "Apache 2.0",
+          "totalBytes": 724
+        },
+        {
+          "ref": "edwardctt/taobao-behavior",
+          "title": "taobao_Behavior",
+          "subtitle": "",
+          "lastUpdated": "2022-07-19T01:54:03.597Z",
+          "licenseName": "Unknown",
+          "totalBytes": 147483915
+        },
+        {
+          "ref": "niusudi/taobao",
+          "title": "taobao",
+          "subtitle": "",
+          "lastUpdated": "2023-09-05T03:13:12.057Z",
+          "licenseName": "Unknown",
+          "totalBytes": 4566549
+        },
+        {
+          "ref": "plukio/taobao-rec-datasets",
+          "title": "Taobao - rec - datasets",
+          "subtitle": "",
+          "lastUpdated": "2024-05-22T14:53:28.7Z",
+          "licenseName": "Apache 2.0",
+          "totalBytes": 41758226
+        },
+        {
+          "ref": "w2ds1314/taobao-anta-sneakers-user-behavior-dataset",
+          "title": "Taobao ANTA Sneakers User Behavior Dataset",
+          "subtitle": "",
+          "lastUpdated": "2026-04-12T03:17:06.04Z",
+          "licenseName": "Community Data License Agreement - Permissive - Version 1.0",
+          "totalBytes": 49094345
+        },
+        {
+          "ref": "marwa80/taobao-features-engineer",
+          "title": "Taobao_Features_Engineer",
+          "subtitle": "",
+          "lastUpdated": "2023-12-04T09:32:33.837Z",
+          "licenseName": "Unknown",
+          "totalBytes": 1321560247
+        },
+        {
+          "ref": "sonnyinkai369/taobao1m",
+          "title": "Taobao1M",
+          "subtitle": "",
+          "lastUpdated": "2025-01-18T19:50:27.257Z",
+          "licenseName": "MIT",
+          "totalBytes": 11964279
+        },
+        {
+          "ref": "jojoyin/taobao-item-names",
+          "title": "taobao_item_names",
+          "subtitle": "",
+          "lastUpdated": "2024-09-17T03:06:39.437Z",
+          "licenseName": "Apache 2.0",
+          "totalBytes": 4597
+        },
+        {
+          "ref": "nat14992/taobaouserbehavior",
+          "title": "TaobaoUserBehavior",
+          "subtitle": "",
+          "lastUpdated": "2026-01-06T15:28:44.227Z",
+          "licenseName": "MIT",
+          "totalBytes": 949807480
+        },
+        {
+          "ref": "zerotrustai/taobao-ad-display-click",
+          "title": "taobao-ad-display-click",
+          "subtitle": "",
+          "lastUpdated": "2026-03-29T07:42:43.613Z",
+          "licenseName": "CC BY-NC-SA 4.0",
+          "totalBytes": 5165473616
+        }
+      ]
+    },
+    {
+      "query": "taobao review",
+      "http_status": 200,
+      "results": []
+    }
+  ],
+  "selected_metadata": [
+    {
+      "ref": "jojoyin/taobao-item-names",
+      "http_status": 200,
+      "title": "taobao_item_names",
+      "subtitle": "",
+      "description": "",
+      "lastUpdated": "2024-09-17T03:06:39.437Z",
+      "licenseName": "Apache 2.0",
+      "currentVersionNumber": 1,
+      "files": []
+    },
+    {
+      "ref": "akacoder404/taobao-maternal-and-infant-shopping-data-set",
+      "http_status": 200,
+      "title": "Taobao Maternal and Infant Shopping Data Set",
+      "subtitle": "This data set is provided by Taobao & Tmall.",
+      "description": "## Overview\nThis dataset collection contains children's info (birthday and gender) provided by consumers who share the information in order to receive better recommendations or search results. These are provided by consumers in Taobao or Tmall.\n\n## Table Description\n\n**sam_tianchi_mum_baby.csv**\n| Column |  Description  |\n| --- | --- |\n| user_id  | User ID (Bigint). |\n| birthday | Children's birthday (e.g. 20130423) |\n| gender | Children's gender (\"0\" denotes female, \"1\" denotes male, \"2\" denotes unknown). |\n\n\n**sam_mum_baby_trade_history**\nThe table contains historical trade info of Taobao members.\n| Column | Description |\n| --- | --- |\n| item_id  |  Item ID (Bigint). |\n| user_id | User ID (Bigint). |\n| cat_id | Category ID (Bigint). |\n| cat1 | Root category ID (Bigint). |\n| property | Property of the corresponding item (String). |\n| buy_mount | Purchase quantity (Bigint). |\n| day | Timestamp. |\n\n\n## Typical Research Topics\nPredict children's ages based on their parents' purchase behavior, or predict what kind of goods a user would buy based on their children's info (age, gender etc.)",
+      "lastUpdated": "2023-08-17T22:26:09.983Z",
+      "licenseName": "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)",
+      "currentVersionNumber": 1,
+      "files": []
+    },
+    {
+      "ref": "fanfanguo/e-commerce-sales-data",
+      "http_status": 200,
+      "title": "E-commerce-sales-data",
+      "subtitle": " Taobao Tmall Jingdong, covering 200 A-share listed companies",
+      "description": "# E-commerce sales data\n\nE-commerce platform includes Taobao + Tmall + Jingdong, covering 200 A-share listed companies, including traditional Chinese medicine, liquor, dairy products and other 75 Shenwan III industry.\n\n#### (I) Data Description\n**Scope**: 200 A-share listed companies\n**Calibre**: Taobao + Tmall + Jingdong, sales summary data of the three major e-commerce platforms\n**Length**: 202001~202309 historical data, a total of 45 periods of data\n**Frequency**: Monthly\n**Unit**: millions\n\n#### (II) Field Description\n**reporttime**: time interval in which the data is located \n**name**: Company abbreviation\n**code**: listing code corresponding to the company\n**SW3**: Shenwan Industry Level III\n**type**: Sales\n**value(M)**: Sales data in millions\n\n#### (III) Use sharing\nTake A share listed company 300783 three squirrels for example,quarter revenue and eussiness-saledata fitting.\nLooking at the correlation from the graph, calculate the correlation coefficient = 86%.\n![Pasted image 20231218120826](https://github.com/guofanfangloveyou/ebusiness-saledata/assets/59468743/3ad9d39b-db82-4b5d-91ec-deab94250ffd)\n\nConclusion: For companies with high proportion of online business, this data can better characterize the company's operating income and serve as a financial forward-looking indicator.\n",
+      "lastUpdated": "2023-12-18T05:29:38.303Z",
+      "licenseName": "Apache 2.0",
+      "currentVersionNumber": 1,
+      "files": []
+    }
+  ]
+}

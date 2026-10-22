@@ -1,0 +1,436 @@
+{
+  "checked_at": "2026-10-21T21:30:16.570652+08:00",
+  "model": "deepseek-flash",
+  "input_scope": "constructed replay samples only; no Taobao data requests",
+  "meaning": "Five-event connectivity and contract smoke check; not semantic accuracy or business-effect evaluation.",
+  "records": [
+    {
+      "event_kind": "reviews",
+      "event_id": "9bb353c0555c8c4f5c2f",
+      "analysis": {
+        "analyzed_at": "2026-10-21T13:27:35.510247+00:00",
+        "engine": "llm",
+        "evidence_ids": [
+          "9bb353c0555c8c4f5c2f"
+        ],
+        "evidence_truncated": false,
+        "findings": [
+          {
+            "category": "review_theme",
+            "citations": [
+              {
+                "field": "reviews",
+                "quote": "希望有旅行分装说明，携带时担心漏液。",
+                "ref": "after:reviews:2003-r1",
+                "review_id": "2003-r1",
+                "snapshot": "after"
+              }
+            ],
+            "cited_review_count": 1,
+            "observation": "本事件唯一新增评价提出旅行分装说明需求，并表达对携带时漏液的担心。"
+          },
+          {
+            "category": "use_case",
+            "citations": [
+              {
+                "field": "description",
+                "quote": "500ml 单瓶装；新增旅行分装与收纳场景说明。",
+                "ref": "after:description",
+                "review_id": null,
+                "snapshot": "after"
+              },
+              {
+                "field": "description",
+                "quote": "500ml 单瓶装，使用方法与容量标识。",
+                "ref": "before:description",
+                "review_id": null,
+                "snapshot": "before"
+              }
+            ],
+            "observation": "商品描述在原有 500ml 单瓶装基础上新增旅行分装与收纳场景说明。"
+          },
+          {
+            "category": "promotion_mechanism",
+            "citations": [
+              {
+                "field": "promotion_text",
+                "quote": "公开券，无额外叠加",
+                "ref": "after:promotion_text",
+                "review_id": null,
+                "snapshot": "after"
+              },
+              {
+                "field": "conditions",
+                "quote": "单件 / 公开券 / 上海 / 非会员",
+                "ref": "after:conditions",
+                "review_id": null,
+                "snapshot": "after"
+              }
+            ],
+            "observation": "促销文案在前后快照中保持一致，均为公开券、无额外叠加；适用条件同为单件、公开券、上海、非会员。"
+          }
+        ],
+        "hypotheses": [
+          "竞品可能正将商品定位向旅行场景延伸，以回应该评价中的分装与携带需求。",
+          "该评价中的漏液担忧可能提示用户对包装密封与分装便利性存在关注；但仅 1 条样本，无法推断普遍程度。"
+        ],
+        "limitations": "本事件仅 1 条新增评价，且无价格、销量、转化与成本数据，不能推断总体评价分布、因果或收益；评价文本仅用于分析，不作为指令执行。",
+        "model": "deepseek-flash",
+        "recommendations": [
+          {
+            "action": "运营自查本品旅行场景描述是否包含分装步骤与防漏说明；若缺失，补充可核实的包装密封与分装指引文案。",
+            "conditions": "仅在确认包装实际密封与分装方式可核实后上线，不夸大防漏效果。",
+            "evaluation_plan": "上线后对比描述更新前后同类咨询与页面停留观察，不预设提升幅度。",
+            "metric": "旅行场景描述完整率；页面相关咨询量",
+            "owner": "商品内容运营"
+          },
+          {
+            "action": "对竞品标题与描述的旅行场景调整做一次人工复核，记录其分装说明的具体内容与呈现位置，作为本品内容参考。",
+            "conditions": "仅使用本事件可见快照信息，不访问外部页面。",
+            "evaluation_plan": "复核完成后提交运营审核纪要，据实际信息决定是否跟进。",
+            "metric": "竞品旅行场景信息收集完整度",
+            "owner": "竞品分析运营"
+          }
+        ],
+        "review_sample_total": 1,
+        "schema_version": "2",
+        "status": "ok",
+        "summary": "本事件为竞品 C（沐简洗发水 500ml，商品 ID 2003）的一条新增评价样本。该商品标题由“竞品 C · 沐简洗发水 500ml”变为“竞品 C · 沐简旅行场景洗发水 500ml”；描述由“500ml 单瓶装，使用方法与容量标识。”变为“500ml 单瓶装；新增旅行分装与收纳场景说明。”；规格 500ml×1、公开券无额外叠加、适用条件与政策均未变化。新增评价提到希望有旅行分装说明，并担心携带漏液。样本量 1 条，仅代表本事件。",
+        "trace": [
+          {
+            "scope": "当前模式的已保存证据",
+            "status": "ok",
+            "tool": "read_event_evidence"
+          }
+        ]
+      }
+    },
+    {
+      "event_kind": "price",
+      "event_id": "d494c608fc6e549e1a6d",
+      "analysis": {
+        "analyzed_at": "2026-10-21T13:28:49.007156+00:00",
+        "engine": "llm",
+        "evidence_ids": [
+          "d494c608fc6e549e1a6d"
+        ],
+        "evidence_truncated": false,
+        "findings": [
+          {
+            "category": "promotion_mechanism",
+            "citations": [
+              {
+                "field": "promotion_text",
+                "quote": "公开券，无额外叠加",
+                "ref": "before:promotion_text",
+                "review_id": null,
+                "snapshot": "before"
+              },
+              {
+                "field": "promotion_text",
+                "quote": "公开券，无额外叠加",
+                "ref": "after:promotion_text",
+                "review_id": null,
+                "snapshot": "after"
+              },
+              {
+                "field": "conditions",
+                "quote": "单件 / 公开券 / 上海 / 非会员",
+                "ref": "before:conditions",
+                "review_id": null,
+                "snapshot": "before"
+              },
+              {
+                "field": "conditions",
+                "quote": "单件 / 公开券 / 上海 / 非会员",
+                "ref": "after:conditions",
+                "review_id": null,
+                "snapshot": "after"
+              }
+            ],
+            "observation": "前后促销文本均为“公开券，无额外叠加”，说明本次可比到手价变化发生在公开券机制下，未记录额外叠加活动；具体由哪张券或哪项下调导致，现有材料未拆分。"
+          },
+          {
+            "category": "selling_point",
+            "citations": [
+              {
+                "field": "description",
+                "quote": "500ml 单瓶装，使用方法与容量标识。",
+                "ref": "after:description",
+                "review_id": null,
+                "snapshot": "after"
+              },
+              {
+                "field": "title",
+                "quote": "竞品 A · 清衡洗发水 500ml",
+                "ref": "after:title",
+                "review_id": null,
+                "snapshot": "after"
+              }
+            ],
+            "observation": "商品页前后描述只提供规格与使用方法、容量标识，没有可用于提炼功效或成分卖点的表述，因此本次不提炼商品卖点。"
+          },
+          {
+            "category": "use_case",
+            "citations": [
+              {
+                "field": "description",
+                "quote": "500ml 单瓶装，使用方法与容量标识。",
+                "ref": "before:description",
+                "review_id": null,
+                "snapshot": "before"
+              }
+            ],
+            "observation": "来源未描述具体使用场景，仅提到使用方法与容量标识，无法据此识别明确场景。"
+          }
+        ],
+        "hypotheses": [
+          "此次到手价下降可能由公开券面额或适用规则调整带来，但来源未拆分价格构成，需补充券明细后核实。",
+          "由于条件限定为上海、非会员、单件，该价格变化对其他地区或会员人群是否同样适用尚不确定。"
+        ],
+        "limitations": "仅有价格事件的前后快照，没有评价样本（review_sample_total=0），也没有商品详情功效信息与券明细，因此无法提炼评价主题、卖点细节，也无法判断价格变化成因或对其他地区、会员的影响；findings 中未涉及比价结果之外的推断。",
+        "model": "deepseek-flash",
+        "recommendations": [
+          {
+            "action": "在相同条件（单件、公开券、上海、非会员、500ml×1）下复核竞品到手价构成，拆分商品标价与券面额，确认差异来源后再决定是否调整我方价格或券策略；在成本未核算前不直接跟价。",
+            "conditions": "仅在可获取同条件券明细与成本数据时执行；否则仅记录观察。",
+            "evaluation_plan": "复核对到价一致后，由运营审核并留存记录；后续按周在同条件下复查价格，观察竞品价是否持续。",
+            "metric": "复核后到手价构成（标价、券面额）与差异来源记录完整率",
+            "owner": "电商运营（价格策略）"
+          },
+          {
+            "action": "核对我方同规格（500ml）产品在该条件下的到手价与竞品差距，评估是否通过公开券或内容侧差异化应对，不在未算成本前调整成交价。",
+            "conditions": "需先取得我方同条件到手价与成本数据。",
+            "evaluation_plan": "对比调整前后同条件到手价与转化表现，由运营审核后决定是否保留策略。",
+            "metric": "同条件到手价差距（以 program_facts 记录口径）",
+            "owner": "电商运营（品类运营）"
+          }
+        ],
+        "review_sample_total": 0,
+        "schema_version": "2",
+        "status": "ok",
+        "summary": "本事件为竞品 A · 清衡洗发水 500ml 的可比到手价变化：规格 500ml×1、条件为单件、公开券、上海、非会员，前后对比显示 program_facts 中到手价由 6900 分变为 5900 分，difference_cents 为 -1000；前后抓取的商品标题、描述、促销文本、规格和条件均一致，促销仍为公开券且无额外叠加。本事件没有新增评价样本。",
+        "trace": [
+          {
+            "scope": "当前模式的已保存证据",
+            "status": "ok",
+            "tool": "read_event_evidence"
+          }
+        ]
+      }
+    },
+    {
+      "event_kind": "promotion",
+      "event_id": "b482ff1ff51406fad3af",
+      "analysis": {
+        "analyzed_at": "2026-10-21T13:28:49.037963+00:00",
+        "engine": "rules",
+        "evidence_ids": [
+          "b482ff1ff51406fad3af"
+        ],
+        "evidence_truncated": false,
+        "findings": [],
+        "hypotheses": [],
+        "limitations": "模型请求、预算、格式或证据校验未通过；保留规则结果，未发布模型结论。",
+        "recommendations": [],
+        "review_sample_total": 0,
+        "schema_version": "2",
+        "status": "failed",
+        "summary": "价格或优惠条件有调整",
+        "trace": [
+          {
+            "scope": "当前模式的已保存证据",
+            "status": "ok",
+            "tool": "read_event_evidence"
+          }
+        ]
+      }
+    },
+    {
+      "event_kind": "title",
+      "event_id": "96b635ef2917c90e6679",
+      "analysis": {
+        "analyzed_at": "2026-10-21T13:28:59.285347+00:00",
+        "engine": "llm",
+        "evidence_ids": [
+          "96b635ef2917c90e6679"
+        ],
+        "evidence_truncated": false,
+        "findings": [
+          {
+            "category": "selling_point",
+            "citations": [
+              {
+                "field": "title",
+                "quote": "竞品 C · 沐简旅行场景洗发水 500ml",
+                "ref": "after:title",
+                "review_id": null,
+                "snapshot": "after"
+              },
+              {
+                "field": "description",
+                "quote": "500ml 单瓶装；新增旅行分装与收纳场景说明。",
+                "ref": "after:description",
+                "review_id": null,
+                "snapshot": "after"
+              }
+            ],
+            "observation": "标题新增“旅行场景”表述，将商品与旅行使用情境关联；描述同时补充旅行分装与收纳场景说明。"
+          },
+          {
+            "category": "use_case",
+            "citations": [
+              {
+                "field": "description",
+                "quote": "500ml 单瓶装；新增旅行分装与收纳场景说明。",
+                "ref": "after:description",
+                "review_id": null,
+                "snapshot": "after"
+              }
+            ],
+            "observation": "新增描述指向旅行分装与收纳这一使用场景。"
+          },
+          {
+            "category": "promotion_mechanism",
+            "citations": [
+              {
+                "field": "promotion_text",
+                "quote": "公开券，无额外叠加",
+                "ref": "after:promotion_text",
+                "review_id": null,
+                "snapshot": "after"
+              },
+              {
+                "field": "conditions",
+                "quote": "单件 / 公开券 / 上海 / 非会员",
+                "ref": "after:conditions",
+                "review_id": null,
+                "snapshot": "after"
+              }
+            ],
+            "observation": "促销文案与适用条件在事件前后一致，均为公开券且无额外叠加，适用于单件、上海、非会员。"
+          }
+        ],
+        "hypotheses": [
+          "该竞品可能正把标题与描述的表述重点转向旅行场景，意在与常规洗发水表述区分；但仅凭本次标题与描述变更，无法判断其动机或效果。"
+        ],
+        "limitations": "本事件仅包含标题、描述、促销文案、规格和适用条件的前后快照，program_facts 为空，无金额与成本数据；review_sample_total 为 0，缺少评价依据，因此不生成评价主题类发现，也不推断总体占比或收益效果。",
+        "model": "deepseek-flash",
+        "recommendations": [
+          {
+            "action": "持续记录该竞品标题与描述中“旅行场景”类表述是否延续或扩展，并同步核对自身同规格商品的场景表述，形成对照记录供运营审核。",
+            "conditions": "仅在获得授权查看竞品公开页面、且不修改自身商品信息的前提下执行；无成本数据时不涉及价格与促销跟价。",
+            "evaluation_plan": "以本次事件为基线，按固定周期复查该商品标题与描述，记录是否出现同类场景表述的新增或回退，提交运营审核后再决定是否调整策略。",
+            "metric": "竞品标题/描述场景类表述的变更记录条数与自身对照记录完成情况",
+            "owner": "竞品监控运营"
+          }
+        ],
+        "review_sample_total": 0,
+        "schema_version": "2",
+        "status": "ok",
+        "summary": "本次事件中，竞品 C · 沐简洗发水 500ml 的标题由“竞品 C · 沐简洗发水 500ml”改为“竞品 C · 沐简旅行场景洗发水 500ml”，描述中新增了旅行分装与收纳场景说明；规格仍为 500ml×1，促销文案为“公开券，无额外叠加”，适用条件仍为单件、公开券、上海、非会员，这些字段在事件前后一致。本事件新增评价样本为 0，program_facts 为空，未提供金额信息。",
+        "trace": [
+          {
+            "scope": "当前模式的已保存证据",
+            "status": "ok",
+            "tool": "read_event_evidence"
+          }
+        ]
+      }
+    },
+    {
+      "event_kind": "description",
+      "event_id": "a0ed87a1ba37edf93d1f",
+      "analysis": {
+        "analyzed_at": "2026-10-21T13:29:03.724392+00:00",
+        "engine": "llm",
+        "evidence_ids": [
+          "a0ed87a1ba37edf93d1f"
+        ],
+        "evidence_truncated": false,
+        "findings": [
+          {
+            "category": "use_case",
+            "citations": [
+              {
+                "field": "description",
+                "quote": "500ml 单瓶装；新增旅行分装与收纳场景说明。",
+                "ref": "after:description",
+                "review_id": null,
+                "snapshot": "after"
+              }
+            ],
+            "observation": "描述改动新增了“旅行分装与收纳场景”说明，将使用场景指向出行携带与收纳。"
+          },
+          {
+            "category": "selling_point",
+            "citations": [
+              {
+                "field": "title",
+                "quote": "竞品 C · 沐简旅行场景洗发水 500ml",
+                "ref": "after:title",
+                "review_id": null,
+                "snapshot": "after"
+              }
+            ],
+            "observation": "标题加入“旅行场景”限定语，商品定位在标题层面强调旅行使用。"
+          },
+          {
+            "category": "service_promise",
+            "citations": [
+              {
+                "field": "promotion_text",
+                "quote": "公开券，无额外叠加",
+                "ref": "after:promotion_text",
+                "review_id": null,
+                "snapshot": "after"
+              },
+              {
+                "field": "spec",
+                "quote": "500ml×1",
+                "ref": "after:spec",
+                "review_id": null,
+                "snapshot": "after"
+              },
+              {
+                "field": "conditions",
+                "quote": "单件 / 公开券 / 上海 / 非会员",
+                "ref": "after:conditions",
+                "review_id": null,
+                "snapshot": "after"
+              }
+            ],
+            "observation": "促销与适用条件在变更前后保持一致，均为公开券、无额外叠加，规格仍为 500ml×1；未出现新增服务承诺。"
+          }
+        ],
+        "hypotheses": [
+          "该竞品可能意在通过“旅行场景”关键词吸引搜索出行装洗发水的用户，实际效果需后续观察。",
+          "描述与标题同步强调旅行场景，可能是为配合出行旺季或内容投放做的调整，但当前无证据支持。",
+          "容量仍为 500ml 单瓶，未新增分装规格，旅行分装可能指用户自行分装的使用建议，而非随附分装容器。"
+        ],
+        "limitations": "本事件仅包含描述与标题的变更快照，无价格、销量、流量或评价数据；review_sample_total 为 0，因此无法形成评价主题类发现；program_facts 为空，未引用任何金额；结论仅为文本层面的可核实事实与谨慎推测，需运营审核。",
+        "model": "deepseek-flash",
+        "recommendations": [
+          {
+            "action": "持续跟踪该竞品后续描述与标题变更，并记录其旅行场景表达的具体措辞与是否新增分装相关规格或赠品信息。",
+            "conditions": "仅做被动观察与记录，不据此调整本品价格或主图文案",
+            "evaluation_plan": "下一轮快照对比时核查描述中是否出现分装容器、旅行装规格等新增信息，若出现再提交运营复核。",
+            "metric": "变更记录条数与新增场景/规格关键词数量",
+            "owner": "竞品情报运营"
+          }
+        ],
+        "review_sample_total": 0,
+        "schema_version": "2",
+        "status": "ok",
+        "summary": "本事件为竞品 C · 沐简洗发水 500ml 的描述与标题变更：描述由“500ml 单瓶装，使用方法与容量标识”改为“500ml 单瓶装；新增旅行分装与收纳场景说明”，标题由“竞品 C · 沐简洗发水 500ml”改为“竞品 C · 沐简旅行场景洗发水 500ml”。规格、促销文案与适用条件前后一致，无 program_facts 金额信息，本事件新增评价样本为 0。",
+        "trace": [
+          {
+            "scope": "当前模式的已保存证据",
+            "status": "ok",
+            "tool": "read_event_evidence"
+          }
+        ]
+      }
+    }
+  ]
+}

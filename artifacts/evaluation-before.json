@@ -1,0 +1,754 @@
+{
+  "case_count": 58,
+  "cases_passed": 50,
+  "exact_match_rate": 0.8620689655172413,
+  "fact_failed_cases": 1,
+  "micro": {
+    "tp": 49,
+    "fp": 8,
+    "fn": 1,
+    "precision": 0.8596491228070176,
+    "recall": 0.98
+  },
+  "per_kind": {
+    "price": {
+      "tp": 13,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "promotion": {
+      "tp": 10,
+      "fp": 8,
+      "fn": 0,
+      "precision": 0.5555555555555556,
+      "recall": 1.0
+    },
+    "title": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "description": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "reviews": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "availability": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.8571428571428571
+    }
+  },
+  "groups": {
+    "无变化": {
+      "total": 8,
+      "passed": 8
+    },
+    "可比价格": {
+      "total": 12,
+      "passed": 12
+    },
+    "促销与条件": {
+      "total": 10,
+      "passed": 10
+    },
+    "文本变化": {
+      "total": 10,
+      "passed": 10
+    },
+    "评价样本": {
+      "total": 6,
+      "passed": 6
+    },
+    "字段覆盖": {
+      "total": 12,
+      "passed": 4
+    }
+  },
+  "rows": [
+    {
+      "id": "stable-01",
+      "group": "无变化",
+      "note": "完全相同快照",
+      "expected": [],
+      "actual": [],
+      "fact_errors": []
+    },
+    {
+      "id": "stable-02",
+      "group": "无变化",
+      "note": "仅观测时间更新",
+      "expected": [],
+      "actual": [],
+      "fact_errors": []
+    },
+    {
+      "id": "stable-03",
+      "group": "无变化",
+      "note": "标题多余空格不构成内容变化",
+      "expected": [],
+      "actual": [],
+      "fact_errors": []
+    },
+    {
+      "id": "stable-04",
+      "group": "无变化",
+      "note": "描述包裹HTML标签但正文相同",
+      "expected": [],
+      "actual": [],
+      "fact_errors": []
+    },
+    {
+      "id": "stable-05",
+      "group": "无变化",
+      "note": "评价顺序调整不构成新增",
+      "expected": [],
+      "actual": [],
+      "fact_errors": []
+    },
+    {
+      "id": "stable-06",
+      "group": "无变化",
+      "note": "已见评价ID再次返回不是新增样本；评价编辑检测不在当前范围",
+      "expected": [],
+      "actual": [],
+      "fact_errors": []
+    },
+    {
+      "id": "stable-07",
+      "group": "无变化",
+      "note": "滚动窗口为空不推断差评被删除",
+      "expected": [],
+      "actual": [],
+      "fact_errors": []
+    },
+    {
+      "id": "stable-08",
+      "group": "无变化",
+      "note": "始终缺失的字段不重复报警",
+      "expected": [],
+      "actual": [],
+      "fact_errors": []
+    },
+    {
+      "id": "price-01",
+      "group": "可比价格",
+      "note": "同条件降价10元",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "price-02",
+      "group": "可比价格",
+      "note": "同条件涨价10元",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "price-03",
+      "group": "可比价格",
+      "note": "一分钱变化仍精确保存",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "price-04",
+      "group": "可比价格",
+      "note": "大幅涨价不产生重复促销事件",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "price-05",
+      "group": "可比价格",
+      "note": "降价后不满券门槛仍需准确计算",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "price-06",
+      "group": "可比价格",
+      "note": "标价上涨满足门槛后到手价反而下降",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "price-07",
+      "group": "可比价格",
+      "note": "券额增加导致可比降价",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "price-08",
+      "group": "可比价格",
+      "note": "券额减少导致可比涨价",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "price-09",
+      "group": "可比价格",
+      "note": "明确零价格不是字段缺失",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "price-10",
+      "group": "可比价格",
+      "note": "来源明确确认的零价格保留",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "price-11",
+      "group": "可比价格",
+      "note": "门槛由不满足变为满足",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "price-12",
+      "group": "可比价格",
+      "note": "门槛由满足变为不满足",
+      "expected": [
+        "price"
+      ],
+      "actual": [
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "promo-01",
+      "group": "促销与条件",
+      "note": "标价与券额抵消",
+      "expected": [
+        "promotion"
+      ],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "promo-02",
+      "group": "促销与条件",
+      "note": "赠品说明改变但当前可比价格未变",
+      "expected": [
+        "promotion"
+      ],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "promo-03",
+      "group": "促销与条件",
+      "note": "会员条件变化不能报可比降价",
+      "expected": [
+        "promotion"
+      ],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "promo-04",
+      "group": "促销与条件",
+      "note": "券门槛调整但都未达门槛",
+      "expected": [
+        "promotion"
+      ],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "promo-05",
+      "group": "促销与条件",
+      "note": "价格确认标记撤回需核查机制",
+      "expected": [
+        "promotion"
+      ],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "promo-06",
+      "group": "促销与条件",
+      "note": "地区不同不能比较报价",
+      "expected": [
+        "promotion"
+      ],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "promo-07",
+      "group": "促销与条件",
+      "note": "两件价不能和单件价比较",
+      "expected": [
+        "promotion"
+      ],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "promo-08",
+      "group": "促销与条件",
+      "note": "规格变化并伴随价格变化，不能报可比降价",
+      "expected": [
+        "promotion"
+      ],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "promo-09",
+      "group": "促销与条件",
+      "note": "未知规格下只记录报价核查",
+      "expected": [
+        "promotion"
+      ],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "promo-10",
+      "group": "促销与条件",
+      "note": "未满足门槛时券额变化不是降价",
+      "expected": [
+        "promotion"
+      ],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "text-01",
+      "group": "文本变化",
+      "note": "标题新增场景",
+      "expected": [
+        "title"
+      ],
+      "actual": [
+        "title"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "text-02",
+      "group": "文本变化",
+      "note": "描述新增容量说明",
+      "expected": [
+        "description"
+      ],
+      "actual": [
+        "description"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "text-03",
+      "group": "文本变化",
+      "note": "标题与描述同时变化",
+      "expected": [
+        "title",
+        "description"
+      ],
+      "actual": [
+        "title",
+        "description"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "text-04",
+      "group": "文本变化",
+      "note": "标题功效变化只记录文本不证明功效",
+      "expected": [
+        "title"
+      ],
+      "actual": [
+        "title"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "text-05",
+      "group": "文本变化",
+      "note": "描述删除为明确空串有别于未知",
+      "expected": [
+        "description"
+      ],
+      "actual": [
+        "description"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "text-06",
+      "group": "文本变化",
+      "note": "空描述增加正文",
+      "expected": [
+        "description"
+      ],
+      "actual": [
+        "description"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "text-07",
+      "group": "文本变化",
+      "note": "标题中数字变化必须保留证据",
+      "expected": [
+        "title"
+      ],
+      "actual": [
+        "title"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "text-08",
+      "group": "文本变化",
+      "note": "HTML正文真实变化",
+      "expected": [
+        "description"
+      ],
+      "actual": [
+        "description"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "text-09",
+      "group": "文本变化",
+      "note": "新增未经验证承诺仍只记录事实",
+      "expected": [
+        "description"
+      ],
+      "actual": [
+        "description"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "text-10",
+      "group": "文本变化",
+      "note": "多字段同时变化不能漏掉价格",
+      "expected": [
+        "title",
+        "description",
+        "price"
+      ],
+      "actual": [
+        "title",
+        "description",
+        "price"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "reviews-01",
+      "group": "评价样本",
+      "note": "新增一条评价只报告一个样本",
+      "expected": [
+        "reviews"
+      ],
+      "actual": [
+        "reviews"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "reviews-02",
+      "group": "评价样本",
+      "note": "新增重复ID只算一条",
+      "expected": [
+        "reviews"
+      ],
+      "actual": [
+        "reviews"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "reviews-03",
+      "group": "评价样本",
+      "note": "旧新混合只统计新增ID",
+      "expected": [
+        "reviews"
+      ],
+      "actual": [
+        "reviews"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "reviews-04",
+      "group": "评价样本",
+      "note": "相同文字不同ID仍是两个样本，不自行判断刷评",
+      "expected": [
+        "reviews"
+      ],
+      "actual": [
+        "reviews"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "reviews-05",
+      "group": "评价样本",
+      "note": "包含指令的评价仅作为样本，不能执行",
+      "expected": [
+        "reviews"
+      ],
+      "actual": [
+        "reviews"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "reviews-06",
+      "group": "评价样本",
+      "note": "本店评价与标题变化并行记录",
+      "expected": [
+        "title",
+        "reviews"
+      ],
+      "actual": [
+        "title",
+        "reviews"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "coverage-01",
+      "group": "字段覆盖",
+      "note": "标价缺失不能称为促销调整",
+      "expected": [
+        "availability"
+      ],
+      "actual": [
+        "promotion",
+        "availability"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "coverage-02",
+      "group": "字段覆盖",
+      "note": "券额缺失不能当作撤券",
+      "expected": [
+        "availability"
+      ],
+      "actual": [
+        "promotion",
+        "availability"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "coverage-03",
+      "group": "字段覆盖",
+      "note": "描述未知不能当作正文删除",
+      "expected": [
+        "availability"
+      ],
+      "actual": [
+        "availability"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "coverage-04",
+      "group": "字段覆盖",
+      "note": "评价缺失不等于没有评价",
+      "expected": [
+        "availability"
+      ],
+      "actual": [
+        "availability"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "coverage-05",
+      "group": "字段覆盖",
+      "note": "多个字段同时缺失只生成覆盖事件",
+      "expected": [
+        "availability"
+      ],
+      "actual": [
+        "promotion",
+        "availability"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "coverage-06",
+      "group": "字段覆盖",
+      "note": "首次恢复标价建立字段基线，不推断降价或促销变化",
+      "expected": [],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "coverage-07",
+      "group": "字段覆盖",
+      "note": "首次恢复券额不推断撤券",
+      "expected": [],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "coverage-08",
+      "group": "字段覆盖",
+      "note": "首次恢复描述建立字段基线",
+      "expected": [],
+      "actual": [],
+      "fact_errors": []
+    },
+    {
+      "id": "coverage-09",
+      "group": "字段覆盖",
+      "note": "首次取得评价窗口不冒充新增评价",
+      "expected": [],
+      "actual": [],
+      "fact_errors": []
+    },
+    {
+      "id": "coverage-10",
+      "group": "字段覆盖",
+      "note": "促销文案暂不可用不能认定活动调整",
+      "expected": [
+        "availability"
+      ],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": [
+        "availability: expected one event, received 0"
+      ]
+    },
+    {
+      "id": "coverage-11",
+      "group": "字段覆盖",
+      "note": "首次取得促销文案不推断活动发生变化",
+      "expected": [],
+      "actual": [
+        "promotion"
+      ],
+      "fact_errors": []
+    },
+    {
+      "id": "coverage-12",
+      "group": "字段覆盖",
+      "note": "缺价格但描述真实变化仍可识别",
+      "expected": [
+        "description",
+        "availability"
+      ],
+      "actual": [
+        "description",
+        "promotion",
+        "availability"
+      ],
+      "fact_errors": []
+    }
+  ],
+  "dataset_version": "2026-10-21-v1",
+  "scope": "固定构造快照的规则变化识别；不是独立人工标注集、真实市场样本或模型质量评估。期望标签按业务含义预先编写。",
+  "dataset_sha256": "57ae013b623919c3ddfd0d72af21a9c4b75b1f718ec76a41b7fb137708b50cae"
+}

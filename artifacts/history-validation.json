@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-21T22:47:18.209199+08:00",
+  "dataset_id": "tianchi9717-b95b53890565ba00-s9717-n200",
+  "archive_sha256": "b95b53890565ba00593c73ce559f1d6b5168bb7baec480edf5b08e586062ccbc",
+  "total_rows": 2129187,
+  "valid_rows": 2129187,
+  "sample_count": 200,
+  "model": "deepseek-flash",
+  "records": [
+    {
+      "line_number": 44463,
+      "engine": "llm",
+      "status": "ok",
+      "findings": 4
+    },
+    {
+      "line_number": 50948,
+      "engine": "rules",
+      "status": "failed",
+      "findings": 0
+    }
+  ],
+  "scope": "Actual historical title/description analysis only; no live product data, changes, prices, promotions or reviews. Not semantic accuracy."
+}

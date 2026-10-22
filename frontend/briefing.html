@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#18322f" />
+    <title>巡品 · 方案与验收</title>
+    <link rel="stylesheet" href="/static/briefing.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="brand" href="/"><span class="brand-mark">巡</span><span>巡品<small>PRODUCT INTELLIGENCE</small></span></a>
+      <nav aria-label="说明页导航"><a href="#source">来源选择</a><a href="#acceptance">要求与证据</a><a class="back" href="/">返回工作台 ↗</a></nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">BUSINESS CASE / DEMONSTRATION NOTE</div>
+        <h1>从商品变化，<br />到有依据的运营动作。</h1>
+        <p class="lead">为运营减少重复巡检，识别值得关注的价格与内容变化，给出可审核、可执行、可复盘的待办。</p>
+        <div class="scope"><span class="dot"></span>验证记录截至 2026.10.21 <span>真实历史文案已接入 · 在线商品来源待验收</span></div>
+      </section>
+
+      <section class="intro-grid" aria-label="业务目标与范围">
+        <article><span class="number">01 / 监控对象</span><h2>重点商品与直接竞品</h2><p>起步规模假设：本店 5 件、竞品 20 件。由运营确认可比关系，按规格、件数和购买条件对齐。</p></article>
+        <article><span class="number">02 / 决策边界</span><h2>先核实，再采取动作</h2><p>缺少成本时生成促销测算任务；少量评价只支持需求核查；不自动改价或发布商品与素材。</p></article>
+      </section>
+
+      <section class="section" aria-labelledby="flow-title">
+        <div class="section-head"><div><span class="eyebrow">THE WORKFLOW</span><h2 id="flow-title">一条变化的处理过程</h2></div><p>程序控制获取与计算，AI 解释文本，人负责判断与执行。</p></div>
+        <ol class="workflow">
+          <li><small>01</small><strong>确认来源</strong><span>用途、白名单、权限与字段</span></li>
+          <li><small>02</small><strong>定时获取</strong><span>限频、预算、去重与异常暂停</span></li>
+          <li><small>03</small><strong>对比证据</strong><span>前后快照与可比金额</span></li>
+          <li><small>04</small><strong>AI 解读</strong><span>原文引用、推测与行动条件</span></li>
+          <li><small>05</small><strong>人工复盘</strong><span>采纳、执行、观察与原因</span></li>
+        </ol>
+        <p class="caption">这是目标业务流程。正式采集仍停在来源验收；当前工作台用构造快照验证后续流程，DeepSeek 调用是真实的。</p>
+      </section>
+
+      <section class="section" id="source" aria-labelledby="source-title">
+        <div class="section-head"><div><span class="eyebrow">DATA SOURCES</span><h2 id="source-title">每类数据，都有适用范围</h2></div></div>
+        <div class="source-grid">
+          <article class="source-card"><span class="badge pending">正式来源 · 待验收</span><h3>本店与竞品分别接入</h3><p>本店候选是具备接口权限与卖家授权的官方能力。竞品需另核实允许该用途的来源、字段和配额；自店权限不覆盖任意竞品。</p><p class="detail">当前官方适配器支持商品身份、标题、标价及实际返回的描述。正式促销、SKU 和评价分页尚待扩展；没有真实成功请求。</p></article>
+          <article class="source-card"><span class="badge">真实历史文案 · 已接入</span><h3>200 条可追溯的标题与描述</h3><p>已从天池官方文件扫描 2,129,187 行，固定种子抽样接入 200 条真实文案，保留文件哈希和原始行号。单份历史文案没有连续商品观测记录，不能据此验证当前价格或促销变化。</p><p class="detail">两条真实文本各调用一次 DeepSeek：一条通过，一条回退并保留失败；许可标记差异仍保留，文本与输出仅在本地展示。Kaggle 目录访问另行记录。</p><a href="/#history">查看真实历史样本 ↗</a> · <a href="https://tianchi.aliyun.com/dataset/9717" target="_blank" rel="noopener noreferrer">天池原始说明 ↗</a></article>
+        </div>
+        <div class="principle"><strong>时间与未知信息</strong><p>数据集发布时间、本地下载时间与商品观测时间分别记录。无新版本就记“无更新”；缺少价格、门槛、条件或评价正文时保持未知，不随机补齐。</p></div>
+      </section>
+
+      <section class="section" id="acceptance" aria-labelledby="acceptance-title">
+        <div class="section-head"><div><span class="eyebrow">REQUIREMENTS &amp; EVIDENCE</span><h2 id="acceptance-title">四项要求，分别验收</h2></div><p>测试与真实运行采用各自的证据，不合并成一个通过率。</p></div>
+        <div class="requirements">
+          <article><div class="requirement-title"><span>01</span><h3>定时获取信息</h3><span class="badge pending">真实运行待验收</span></div><p>已实现调度、来源轮转与授权配置校验；模拟请求测试通过。</p><p class="detail">还需适用来源、真实字段映射及至少三个实际调度周期。静态 CSV 重读不算新增商品观测。</p></article>
+          <article><div class="requirement-title"><span>02</span><h3>识别与分析内容</h3><span class="badge">真实历史文本已联调</span></div><p>程序检测差异与计算金额；真实 DeepSeek 提取语义、引用原文，并把谨慎推测单独展示。</p><p class="detail">五类构造事件已保存结果；另有两条真实历史文案请求，一条通过、一条回退。仍需独立语义标注、连续真实快照与经营观察。</p></article>
+          <article><div class="requirement-title"><span>03</span><h3>输出运营建议</h3><span class="badge">处理闭环已验证</span></div><p>提供信息优化、促销测算、美工需求；任务包含证据、目标本店商品、负责人、条件及观察指标。</p><p class="detail">人工记录计划、实际动作、指标与台账；无数据可说明无法评估。暂无真实经营收益证据。</p></article>
+          <article><div class="requirement-title"><span>04</span><h3>管理采集风险</h3><span class="badge">控制逻辑已验证</span></div><p>最小间隔、日预算、去重、退避与暂停已通过模拟网络测试，回放可展示异常状态。</p><p class="detail">真实来源需按实际规则再验收；模型无法绕过请求控制，人工恢复也不能缩短最小间隔。</p></article>
+        </div>
+        <div class="evidence-strip">
+          <div><strong>96</strong><span>自动化测试通过</span><small>本地代码与模拟网络</small></div>
+          <div><strong>62 / 62</strong><span>固定规则案例匹配</span><small>同项目构造集，非独立标注</small></div>
+          <div><strong>200 条</strong><span>真实历史文案接入</span><small>两条模型请求，非准确率评估</small></div>
+        </div>
+      </section>
+
+      <section class="demo section" aria-labelledby="demo-title">
+        <div><span class="eyebrow">OPEN THE WORKBENCH</span><h2 id="demo-title">按证据讲解这份方案</h2><p>先查看正式来源状态，再切换流程回放。打开价格证据、已保存 AI 解读与人工复盘，最后展示数据与风控。</p><p class="detail">不必重置现有记录或再次调用模型。引用能证明原文存在，推论和执行条件仍需人工核实。</p></div><a class="primary-link" href="/">进入工作台 →</a>
+      </section>
+    </main>
+    <footer><span>巡品 / 商品与竞品监控 Agent 方案</span><span>方案完整性 · 证据可追溯 · 运行边界明确</span></footer>
+  </body>
+</html>
